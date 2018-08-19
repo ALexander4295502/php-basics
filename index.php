@@ -1,3 +1,7 @@
+<?php
+$display_name = 'Zheng';
+$display_sentence = 'Hello world!';
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,6 +12,6 @@
     <title>Document</title>
 </head>
 <body>
-<h1><?php echo 'Hello world!'; ?> </h1>
+<h1><?php echo $display_name; ?> </h1>
 </body>
 </html>
