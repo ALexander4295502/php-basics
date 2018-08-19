@@ -23,3 +23,7 @@ var_dump($a / $b);
 $a = $a + 1;
 var_dump($a);
 var_dump(++$a);
+
+echo '<h4>------------------</h4>';
+echo '<h3>Hello this is last line</h3>';
+

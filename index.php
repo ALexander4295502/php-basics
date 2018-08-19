@@ -13,5 +13,6 @@ $display_sentence = 'Hello world!';
 </head>
 <body>
 <h1><?php echo $display_name; ?> </h1>
+<h2><?php include './inc/numbers.php'?></h2>
 </body>
 </html>
