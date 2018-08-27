@@ -16,6 +16,8 @@ class Recipe
 
     public function __toString()
     {
+        $output = "You are calling a " . __CLASS__ . " object with the title $_title";
+        echo $output;
         return Render::getRecipeInfo($this);
     }
 
