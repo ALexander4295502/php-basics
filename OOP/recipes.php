@@ -16,8 +16,10 @@ class Recipe
 
     public function __toString()
     {
-        $output = "You are calling a " . __CLASS__ . " object with the title $_title";
-        echo $output;
+        echo "You are calling a " . __CLASS__ . " object \n";
+        echo "It is stored in " . basename(__FILE__) . " at " . __DIR__ . ".\n";
+        echo "this display is from line " . __LINE__ . " in method " . __METHOD__ . "\n";
+        echo "The following methods are available for objects from this class: \n" . implode("\n", get_class_methods(__CLASS__)) . "\n";
         return Render::getRecipeInfo($this);
     }
 
