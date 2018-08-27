@@ -5,6 +5,15 @@ class Recipe
     private $_title;
 
     /**
+     * Recipe constructor.
+     * @param $_title
+     */
+    public function __construct($_title=null)
+    {
+        $this->_title = $_title;
+    }
+
+    /**
      * @return mixed
      */
     public function getTitle()
