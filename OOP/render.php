@@ -2,7 +2,7 @@
 
 class Render {
 
-    private static function getRecipeInfo($recipe) {
+    public static function getRecipeInfo($recipe) {
         return $recipe->getTitle() . " including " . implode(", ", $recipe->getIngredients());
     }
 

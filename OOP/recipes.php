@@ -1,5 +1,6 @@
 <?php
 
+require 'render.php';
 class Recipe
 {
     private $_title;
@@ -11,6 +12,11 @@ class Recipe
     public function __construct($_title=null)
     {
         $this->_title = $_title;
+    }
+
+    public function __toString()
+    {
+        return Render::getRecipeInfo($this);
     }
 
     /**
