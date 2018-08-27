@@ -3,11 +3,11 @@
 class Recipe
 {
     private $_title;
-    public $instructions = [];
-    public $ingredients = [];
-    public $source = "Zheng";
-    public $yield;
-    public $tag = [];
+    private $_instructions = [];
+    private $_ingredients = [];
+    private $_source = "Zheng";
+    private $_yield;
+    private $_tag = [];
 
     public function setTitle($title) {
         $this->_title = ucwords($title);
@@ -15,12 +15,16 @@ class Recipe
 
     public function displayRecipe()
     {
-        return $this->title . " by " . $this->source;
+        return $this->_title . " by " . $this->_source . "\n";
+    }
+
+    public function getIngredients() {
+        return $this->_ingredients;
     }
 }
 
 $recipe1 = new Recipe();
 $recipe1->setTitle('Hello world');
-var_dump($recipe1->ingredients);
+var_dump($recipe1->getIngredients());
 
 echo $recipe1->displayRecipe();
