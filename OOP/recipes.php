@@ -3,28 +3,105 @@
 class Recipe
 {
     private $_title;
+
+    /**
+     * @return mixed
+     */
+    public function getTitle()
+    {
+        return $this->_title;
+    }
+
+    /**
+     * @param mixed $title
+     */
+    public function setTitle($title)
+    {
+        $this->_title = $title;
+    }
+
+    /**
+     * @return array
+     */
+    public function getInstructions()
+    {
+        return $this->_instructions;
+    }
+
+    /**
+     * @param array $instructions
+     */
+    public function setInstructions($instructions)
+    {
+        $this->_instructions = $instructions;
+    }
+
+    /**
+     * @return array
+     */
+    public function getIngredients()
+    {
+        return $this->_ingredients;
+    }
+
+    /**
+     * @param array $ingredients
+     */
+    public function setIngredients($ingredients)
+    {
+        $this->_ingredients = $ingredients;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSource()
+    {
+        return $this->_source;
+    }
+
+    /**
+     * @param string $source
+     */
+    public function setSource($source)
+    {
+        $this->_source = $source;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getYield()
+    {
+        return $this->_yield;
+    }
+
+    /**
+     * @param mixed $yield
+     */
+    public function setYield($yield)
+    {
+        $this->_yield = $yield;
+    }
+
+    /**
+     * @return array
+     */
+    public function getTag()
+    {
+        return $this->_tag;
+    }
+
+    /**
+     * @param array $tag
+     */
+    public function setTag($tag)
+    {
+        $this->_tag = $tag;
+    }
     private $_instructions = [];
     private $_ingredients = [];
     private $_source = "Zheng";
     private $_yield;
     private $_tag = [];
-
-    public function setTitle($title) {
-        $this->_title = ucwords($title);
-    }
-
-    public function displayRecipe()
-    {
-        return $this->_title . " by " . $this->_source . "\n";
-    }
-
-    public function getIngredients() {
-        return $this->_ingredients;
-    }
 }
-
-$recipe1 = new Recipe();
-$recipe1->setTitle('Hello world');
-var_dump($recipe1->getIngredients());
-
-echo $recipe1->displayRecipe();
