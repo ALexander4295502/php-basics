@@ -13,7 +13,13 @@ $cookbook = new RecipeCollection("Zheng Recipes");
 $cookbook->addRecipe($recipe1);
 //var_dump($cookbook->getRecipes());
 
-$reps = &$cookbook->getRecipes();
-$reps[] = $recipe1;
-debug_zval_dump($reps);
-debug_zval_dump($cookbook->getRecipes());
+//$reps = &$cookbook->getRecipes();
+//$reps[] = $recipe1;
+//debug_zval_dump($reps);
+//debug_zval_dump($cookbook->getRecipes());
+
+//$test = 'a';
+//$test .= 'bc';
+//echo substr($test, 0, -1);
+
+var_dump(is_a($cookbook, RecipeCollection::class));
