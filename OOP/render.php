@@ -1,7 +1,12 @@
 <?php
 
 class Render {
+
+    private static function getRecipeInfo($recipe) {
+        return $recipe->getTitle() . " including " . implode(", ", $recipe->getIngredients());
+    }
+
     public static function displayRecipe($recipe) {
-        echo $recipe->getTitle() . " including " . implode(", ", $recipe->getIngredients());
+        echo self::getRecipeInfo($recipe);
     }
 }
